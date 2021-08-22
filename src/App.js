@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import Form from "./components/Form";
 import Weather from "./components/Weather";
 
-const API_KEY = "8de787e4fcad396c47c5fefb9faa27e6";
+/*const API_KEY = "8de787e4fcad396c47c5fefb9faa27e6";*/
 
 class App extends React.Component {
   state = {
