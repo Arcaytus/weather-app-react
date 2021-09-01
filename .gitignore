@@ -2,7 +2,7 @@
 
 
 # other
-config.js
+/src/api/config.js
 
 # dependencies
 /node_modules
