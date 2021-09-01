@@ -10,7 +10,7 @@ import WeatherList from "./components/WeatherList";
 const App = () => {
   // destructure the returned values
   const {data, error, isLoading, setUrl} = UseFetch();
-  console.log(data);
+  
   // error handling
   const getContent = () => {
     if(error) return <h2>Error when fetching: {error}</h2>
@@ -23,7 +23,7 @@ const App = () => {
 
   return (
     <Container className="App">
-      <CitySelector onSearch={(city) => setUrl(`${API_BASE_URL}/data/2.5/forecast?q=${city}&appid=${API_KEY}`)} />
+      <CitySelector onSearch={(city) => setUrl(`${API_BASE_URL}/data/2.5/forecast?q=${city}&cnt=5&appid=${API_KEY}`)} />
       {getContent()}
     </Container>
   );
