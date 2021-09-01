@@ -11,6 +11,7 @@ const App = () => {
   // destructure the returned values
   const {data, error, isLoading, setUrl} = UseFetch();
   console.log(data);
+  
 
 
   return (
