@@ -11,13 +11,20 @@ const App = () => {
   // destructure the returned values
   const {data, error, isLoading, setUrl} = UseFetch();
   console.log(data);
-  
+  // error handling
+  const getContent = () => {
+    if(error) return <h2>Error when fetching: {error}</h2>
+    if(!data && isLoading) return <h2>LOADING...</h2>
+    if(!data) return null;
+    return <WeatherList weathers={data.list} />
+  };
+
 
 
   return (
     <Container className="App">
       <CitySelector onSearch={(city) => setUrl(`${API_BASE_URL}/data/2.5/forecast?q=${city}&appid=${API_KEY}`)} />
-      {data && <WeatherList weathers={data.list} /> }
+      {getContent()}
     </Container>
   );
 };
