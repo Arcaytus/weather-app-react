@@ -1,7 +1,7 @@
 import React from "react";
 import CitySelector from "./components/CitySelector";
 import "./App.css";
-import Background from "./img/Background.jpg";
+
 import { Container } from "react-bootstrap";
 import UseFetch from "./hooks/UseFetch";
 import { API_KEY, API_BASE_URL } from "./api/config";
@@ -23,12 +23,7 @@ const App = () => {
 
 
   return (
-    <Container style={{ 
-      backgroundImage: `url(${Background})`,
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover',
-      height: '100%'  
-      }}>
+    <Container className="Cont">
       <div className="App">
         <CitySelector onSearch={(city) => setUrl(`${API_BASE_URL}/data/2.5/forecast?q=${city}&units=metric&cnt=30&appid=${API_KEY}`)} />
         {getContent()}
