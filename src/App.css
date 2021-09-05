@@ -1,7 +1,7 @@
-body,html {
+html, body {
   height: 100%;
-  margin: auto;
-  background-color: rgb(230, 159, 7);
+  background: linear-gradient(to top, #6bd3f9 0%,#0f68c1 100%) no-repeat; 
+  background-size: cover;
   font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
 
