@@ -1,5 +1,5 @@
 .Card {
-    background: rgba(255, 255, 255, 0.226);
+    background: rgb(241, 227, 227);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(0px);
@@ -7,8 +7,7 @@
     border: 1px solid rgba(0, 0, 0, 0.18);
     width: 300px;
     display: block;
-    margin: 5px auto;
-    
+    margin: 5px auto;  
   }
   
   
