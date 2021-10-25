@@ -25,7 +25,7 @@ const App = () => {
   return (
     <Container>
       <div className="App">
-        <CitySelector onSearch={(city) => setUrl(`${API_BASE_URL}/data/2.5/forecast?q=${city}&units=metric&cnt=2&appid=${API_KEY}`)} />
+        <CitySelector onSearch={(city) => setUrl(`${API_BASE_URL}/data/2.5/forecast?q=${city}&units=metric&cnt=10&lang=sp&appid=${API_KEY}`)} />
         {getContent()}
       </div>
     </Container>  
