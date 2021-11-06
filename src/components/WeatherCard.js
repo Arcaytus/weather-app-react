@@ -1,13 +1,12 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-import classes from '../styles/WeatherCard.module.css';
+import classes from "../styles/WeatherCard.module.css";
 
-
-const WeatherCard = ({dt, temp_min, temp_max, main, icon}) => {
-	//create date object//
-	const date = new Date(dt);
-	return ( 
-		<div className={classes.Card}>
+const WeatherCard = ({ dt, temp_min, temp_max, main, icon }) => {
+  //create date object//
+  const date = new Date(dt);
+  return (
+    <div className={classes.Card}>
       <Card.Img
         variant="top"
         // get the src from example url and pass the icon prop for icon code
@@ -17,7 +16,7 @@ const WeatherCard = ({dt, temp_min, temp_max, main, icon}) => {
         <Card.Title>{main}</Card.Title>
         {/*  datetime is received in milliseconds, let's turn into local date time */}
         <p>
-          <span style={{ fontSize: '1rem', fontWeight: '500' }}>
+          <span style={{ fontSize: "1rem", fontWeight: "500" }}>
             {date.toLocaleTimeString()}
           </span>
           <br />
